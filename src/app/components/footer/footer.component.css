@@ -1,0 +1,30 @@
+mat-toolbar {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.footer-spacer {
+  flex: 1 1 auto;
+}
+
+.copyright {
+  font-size: small;
+  font-family: 'Source Code Pro', monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #673ab7;
+}
+
+.space-icons {
+  padding: 1%;
+}
+
+*::selection {
+  background-color: #673ab7;
+  color: #ffd740;
+}
