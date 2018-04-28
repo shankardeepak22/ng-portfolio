@@ -1,0 +1,15 @@
+.align {
+  padding-top: 10%;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+* {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.icon {
+  color: rgba(255, 255, 255, 1);
+}

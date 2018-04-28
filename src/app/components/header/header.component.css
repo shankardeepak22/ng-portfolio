@@ -1,0 +1,34 @@
+mat-toolbar {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.header-icon {
+  padding: 0 14px;
+}
+
+.header-spacer {
+  flex: 1 1 auto;
+}
+
+.title {
+  font-family: 'Dancing Script', cursive;
+  font-size: xx-large;
+}
+
+a {
+  color: white;
+}
+
+.blog {
+  text-decoration: underline;
+}
+
+.blog:hover {
+  color: #009688;
+}
+
+a:hover {
+  color: #ffd740;
+  text-decoration: none;
+}
