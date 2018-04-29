@@ -8,12 +8,7 @@
 
 .box {
   padding: 1%;
-  background-image: url("https://lh3.googleusercontent.com/rPG8pGsxcx2SLNwXlUXKxhtGDshDoJ8woWj6MQrububbg2AyEGLeTk3smDuzXpmWh0uu2Nbs0o5t3hUNO_i-Nwkm-z0Tv_bf5KC8ypxtg4CVZXpCNngyOYP00W97KLMES72kstVztvDFjEuwUz0A5PXUrN0w_UvRahYqt7AVSwAN26DqPcgjiHpy3xlvxuPE42vUVOhVVqGQb4h1eDEQd8_nhrViMJUVgBOIqYr-ek6wxNeLAwWBo6f12ZpByrcVks38UqTvRCVqrrKYIac-cWb6HanB_9s5RmgCTl0rkP9WhyHgdDFC_SKhC_wXbMPxNi8kYLAKTeO8rJ5fviXprM7VXym1KEMbIhli-5vn7R2MdYnipSD--Xen3TOh9jHgPn-Hloi2SQ2u8yN5zAN5KW3qfPSu1fp72K1bN8CTWme6qv7EJUnHc9oPK5L0aMPCEOU2YM_qXoxJMBn_yFZHKM2t0dwr7LX8P-thHmis4aKTkYFwasAwnxWS_JZc7FOzUTOhWTXpQMLDTbZVG6_Rj9IhpzP5j7w8s4N9Wh7RK4JXB73Y-gCJjyQPW5r9f_aFGExgE6QSsW03xrm3PwI1VWRCH4tiG2hZG6fYCkk1=w1601-h901-no");
-  background-attachment: fixed;
-  position: relative;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+  background: linear-gradient(#673ab7, #ffd740);
 }
 
 
