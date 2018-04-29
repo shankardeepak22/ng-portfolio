@@ -1,8 +1,3 @@
-mat-toolbar {
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-}
-
 .header-icon {
   padding: 0 14px;
 }
@@ -22,10 +17,6 @@ a {
 
 .blog {
   text-decoration: underline;
-}
-
-.blog:hover {
-  color: #009688;
 }
 
 a:hover {
