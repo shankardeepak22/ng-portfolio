@@ -24,6 +24,9 @@ import {AcheivementsComponent} from './components/view/acheivements/acheivements
 import {RitComponent} from './components/view/education/rit/rit.component';
 import {AitComponent} from './components/view/education/ait/ait.component';
 import {ParticlesModule} from 'angular-particle';
+import { TrComponent } from './components/view/experience/tr/tr.component';
+import { TemminovaComponent } from './components/view/experience/temminova/temminova.component';
+import { MindexComponent } from './components/view/experience/mindex/mindex.component';
 
 
 @NgModule({
@@ -40,7 +43,10 @@ import {ParticlesModule} from 'angular-particle';
     ProjectsComponent,
     AcheivementsComponent,
     RitComponent,
-    AitComponent
+    AitComponent,
+    TrComponent,
+    TemminovaComponent,
+    MindexComponent
   ],
   imports: [
     BrowserModule,
