@@ -1,4 +1,6 @@
-version: 2
+version: 2.1
+orbs:
+  inspecode: rocro/inspecode@1.0.0
 jobs:
   build:
     docker:
@@ -40,7 +42,11 @@ jobs:
           - dist
 
 workflows:
-  version: 2
+  version: 2.1
+  run_inspecode_job:
+    jobs:
+      - inspecode/run:
+          api_token:
   build_and_test:
     jobs:
-    - build
+      - build
