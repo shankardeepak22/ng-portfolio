@@ -1,4 +1,4 @@
-# NgPortfolio
+# NgPortfolio [![CircleCI](https://circleci.com/gh/drs3114/ng-portfolio/tree/master.svg?style=svg)](https://circleci.com/gh/drs3114/ng-portfolio/tree/master)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
 
