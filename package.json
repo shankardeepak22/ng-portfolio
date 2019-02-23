@@ -35,10 +35,11 @@
     "ng2-typewriter": "^1.1.0",
     "path": "^0.12.7",
     "rxjs": "^5.5.6",
-    "typescript": "~2.5.3",
+    "tslib": "^1.9.0",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~0.13.0",
     "@angular/cli": "^7.3.3",
     "@angular/compiler-cli": "^7.2.6",
     "@angular/language-service": "^5.2.0",
@@ -57,7 +58,7 @@
     "protractor": "^5.4.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
-    "typescript": "~2.5.3"
+    "typescript": "3.2.4"
   },
   "engines": {
     "node": "10.0.0",
