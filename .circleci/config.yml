@@ -48,7 +48,7 @@ workflows:
   run_inspecode_job:
     jobs:
       - inspecode/run:
-          api_token:
+          api_token: 417dc0dfa07163dfedf9c1c99e4e5028
   build_and_test:
     jobs:
       - build
