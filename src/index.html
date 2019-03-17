@@ -14,6 +14,19 @@
 </head>
 <body class="mat-app-background">
 <app-root></app-root>
+<script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBA1022juxwhxoxRWBDzqbJox5_5xBxVKc",
+    authDomain: "ngportfolio-4f8ec.firebaseapp.com",
+    databaseURL: "https://ngportfolio-4f8ec.firebaseio.com",
+    projectId: "ngportfolio-4f8ec",
+    storageBucket: "ngportfolio-4f8ec.appspot.com",
+    messagingSenderId: "24669992863"
+  };
+  firebase.initializeApp(config);
+</script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
