@@ -31,7 +31,7 @@ jobs:
     - run:
         name: Building
         command: |
-          if [ "${CIRCLE_BRANCH}" == "master" ]; then
+          if [ "${CIRCLE_BRANCH}" == "main" ]; then
               npm run build-prod
           else
               npm run build-dev
@@ -58,7 +58,7 @@ workflows:
     working_directory: /dist
     steps:
       - run:
-          name: Deploy Master to Firebase
+          name: Deploy main to Firebase
           command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
 
     workflows:
@@ -72,4 +72,4 @@ workflows:
                 - build-job
               filters:
                 branches:
-                  only: master
+                  only: main
