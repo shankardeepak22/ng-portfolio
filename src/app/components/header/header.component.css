@@ -15,8 +15,23 @@ a {
   color: white;
 }
 
-.blog {
+.blog, .poems {
   text-decoration: underline;
+}
+
+.publication-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pad-right {
+  padding-right: 10px;
+}
+
+.pad-left {
+  padding-left: 10px;
 }
 
 a:hover {

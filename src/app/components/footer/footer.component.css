@@ -3,6 +3,12 @@ mat-toolbar {
   padding-bottom: 2%;
 }
 
+mat-toolbar-row {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 .footer-spacer {
   flex: 1 1 auto;
 }
