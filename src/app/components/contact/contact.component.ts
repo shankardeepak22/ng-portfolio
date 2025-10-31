@@ -1,5 +1,7 @@
 import { Component, ChangeDetectionStrategy, signal } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -10,9 +12,9 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
 })
 export class ContactComponent {
   public readonly contactForm: FormGroup;
-  public readonly submitStatus = signal<'idle' | 'success' | 'error'>('idle');
+  public readonly submitStatus = signal<'idle' | 'success' | 'error' | 'loading'>('idle');
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private http: HttpClient) {
     this.contactForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
@@ -23,9 +25,22 @@ export class ContactComponent {
 
   onSubmit() {
     if (this.contactForm.valid) {
-      this.submitStatus.set('success');
-      this.contactForm.reset();
-      setTimeout(() => this.submitStatus.set('idle'), 5000);
+      this.submitStatus.set('loading');
+
+      const formData = this.contactForm.value;
+
+      this.http.post(environment.cloudFunctionUrl, formData).subscribe({
+        next: () => {
+          this.submitStatus.set('success');
+          this.contactForm.reset();
+          setTimeout(() => this.submitStatus.set('idle'), 5000);
+        },
+        error: (error) => {
+          console.error('Error sending email:', error);
+          this.submitStatus.set('error');
+          setTimeout(() => this.submitStatus.set('idle'), 5000);
+        }
+      });
     }
   }
 }

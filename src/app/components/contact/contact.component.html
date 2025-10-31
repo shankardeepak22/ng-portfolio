@@ -1,29 +1,8 @@
 <section id="contact" class="contact">
   <div class="container">
     <h2 class="section-title">Get In Touch</h2>
-    <p class="section-subtitle">
-      Have a project in mind or want to collaborate? Feel free to reach out!
-    </p>
 
     <div class="contact-content">
-      <div class="contact-info">
-        <div class="info-item">
-          <h3>📧 Email</h3>
-          <p>your.email&#64;example.com</p>
-        </div>
-        <div class="info-item">
-          <h3>📍 Location</h3>
-          <p>Natick, MA</p>
-        </div>
-        <div class="info-item">
-          <h3>💼 LinkedIn</h3>
-          <p>linkedin.com/in/yourprofile</p>
-        </div>
-        <div class="info-item">
-          <h3>🎓 Education</h3>
-          <p>M.S. Computer Science - RIT</p>
-        </div>
-      </div>
 
       <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
         <div class="form-group">
@@ -76,8 +55,18 @@
           </div>
         }
 
-        <button type="submit" class="submit-btn" [disabled]="contactForm.invalid">
-          Send Message
+        @if (submitStatus() === 'error') {
+          <div class="error-message">
+            ✗ Failed to send message. Please try again or email directly.
+          </div>
+        }
+
+        <button type="submit" class="submit-btn" [disabled]="contactForm.invalid || submitStatus() === 'loading'">
+          @if (submitStatus() === 'loading') {
+            <span>Sending...</span>
+          } @else {
+            <span>Send Message</span>
+          }
         </button>
       </form>
     </div>
