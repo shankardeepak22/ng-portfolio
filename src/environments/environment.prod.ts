@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  cloudFunctionUrl: 'https://us-central1-ngportfolio-4f8ec.cloudfunctions.net/sendContactEmail'
+  cloudFunctionUrl: 'https://sendcontactemail-fuyv2qqaoq-uc.a.run.app'
 };
