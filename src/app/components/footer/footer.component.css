@@ -1,36 +1,75 @@
-mat-toolbar {
-  padding-top: 2%;
-  padding-bottom: 2%;
+.footer {
+  background: #1f2937;
+  color: white;
+  padding: 3rem 0 1rem;
 }
 
-mat-toolbar-row {
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-.footer-spacer {
-  flex: 1 1 auto;
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 2rem;
 }
 
-.copyright {
-  font-size: small;
-  font-family: 'Source Code Pro', monospace;
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin: 0 0 1rem 0;
+  color: #667eea;
 }
 
-a {
+.footer-section h4 {
+  font-size: 1.125rem;
+  margin: 0 0 1rem 0;
+  color: #e5e7eb;
+}
+
+.footer-section p {
+  color: #9ca3af;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-section ul li a {
+  color: #9ca3af;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-a:hover {
-  color: #673ab7;
+.footer-section ul li a:hover {
+  color: #667eea;
 }
 
-.space-icons {
-  padding: 1%;
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid #374151;
+  text-align: center;
 }
 
-*::selection {
-  background-color: #673ab7;
-  color: #ffd740;
+.footer-bottom p {
+  color: #9ca3af;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }

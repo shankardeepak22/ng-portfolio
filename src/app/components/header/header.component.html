@@ -1,12 +1,23 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <!--<mat-icon routerLink="/" class="header-icon">home</mat-icon>-->
-    <span class="header-spacer"></span>
-    <a routerLink="/"><span class="title">Deepak Ravi Shankar</span></a>
-    <span class="header-spacer"></span>
-    <section class="publication-links" id="publications_links">
-      <a href="https://poems.deepakshankar.com"><span class="title blog pad-right"> Poems </span></a>
-      <a href="https://blogs.deepakshankar.com"><span class="title blog pad-left"> Blogs </span></a>
-    </section>
-  </mat-toolbar-row>
-</mat-toolbar>
+<header class="header">
+  <div class="container">
+    <div class="logo" (click)="scrollToSection('hero')">
+      <h2>DS</h2>
+    </div>
+    <nav [class.open]="isMenuOpen()">
+      <ul>
+        <li><button (click)="scrollToSection('hero')">Home</button></li>
+        <li><button (click)="scrollToSection('about')">About</button></li>
+        <li><button (click)="scrollToSection('experience')">Experience</button></li>
+        <li><button (click)="scrollToSection('education')">Education</button></li>
+        <li><button (click)="scrollToSection('skills')">Skills</button></li>
+        <li><button (click)="scrollToSection('projects')">Projects</button></li>
+        <li><button (click)="scrollToSection('contact')">Contact</button></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>

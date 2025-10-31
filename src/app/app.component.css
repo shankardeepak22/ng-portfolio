@@ -1,14 +1,4 @@
-.align {
-  padding: 2% 2% 1% 2%;
+main {
+  display: flex;
+  flex-direction: column;
 }
-
-.bg {
-  background-color: #ffffff;
-}
-
-.box {
-  padding: 1%;
-  background: linear-gradient(#673ab7, #ffd740);
-}
-
-

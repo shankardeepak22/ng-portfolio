@@ -1,0 +1,73 @@
+SUMMARY
+Full Stack Software Engineer with 7+ years of experience in building high-performance, scalable web applications. Deep expertise in Java, JavaScript, Spring and Node.js. Proficient in Agile methodologies to deliver exceptional user experiences. Proven ability to lead technical initiatives, architect complex systems, and mentor interns.
+
+EXPERIENCE
+MathWorks 				     		    	          Natick, MA, USA
+Senior Software Engineer						           May 2025 – Present Software Engineer	II			      			 March 2020 – April 2025
+MATLAB Grader MCP Server for MATLAB Copilot:
+	•	developed a new MCP Server to integrate with MATLAB Copilot to perform MATLAB Grader actions.
+	•	
+MATLAB Grader in MATLAB Online:
+	•	Pioneered development of API gateway to route MATLAB Online requests to Grader microservices with load balancers & circuit-breakers, achieving 99.95% system availability.
+	•	Drove the implementation of request validation using server to server auth with PASETO, resulting in secure communication of MATLAB Online with MATLAB Grader.
+	•	Spearheaded the In Product experience initiative by deploying a robust system with increased performance and efficiency, enabling the system to handle 20% growth in user flow.
+MATLAB Assessment Manager:
+	•	Led the architecture and development of an instructor focused web application using Java, Spring Boot and Hibernate to manage and share curated problems resulting in efficient database design with 35% reduction in duplications.
+	•	Enhanced user interactions by refactoring the Problem Collection interface with improved accessibility, resulting in 15% increased engagement from users with disability.
+Learning Tool Service:
+	•	Re- architected an existing monolithic application as a set of microservices using Java, Spring Boot that increased the system performance by 60%.
+	•	Enabled faster ingestion of solution scoring requests using batch processing that reduced the cost of multiple MATLAB source file compilation on multiple workers.
+
+Mindex Technologies	                 		               			   Rochester, NY, USA
+Software Engineer     		          		          	               April 2018 – February 2020
+Approvals:
+	•	Enhanced the payroll system in Paychex by adding approval feature to improve and secure direct deposit transactions when an employee changes their payment elections using Java and Spring Boot.
+	•	Designed a notification workflow to trigger notifications based on user preference for communicating changes in the approval status using Java and Apache FreeMarker.
+Onboarding and E – Sign:
+	•	Drove development and proposed the Spring Boot WebFlux technology stack to build a new e-signature application that gathers user consent for incorporating changes requested through Paychex Flex application ecosystem and configured it with the Jenkins CI/CD pipeline.
+	•	Orchestrated the migration from MySQL to MongoDB, optimizing schema management. 
+
+Thomson Reuters		             			                   Bangalore, KA, India
+Associate Software Engineer                               			                   August 2013 – April 2015
+Index Management
+	•	Developed and integrated an online index tool for Westlaw. Utilized Java and Spring framework for development and Hibernate ORM for data persistence.
+
+EDUCATION
+Rochester Institute of Technology				         	           Rochester, NY, USA
+Master of Science (M.S)				               		                  Computer Science
+Dr. Ambedkar Institute of Technology			                        	       Bengaluru, KA, INDIA
+Bachelor of Engineering (B.E)			               		            	                  Computer Science
+
+Strengths:
+	•	Scalable System Design.
+	•	Distributed system architecture for enterprise applications.
+	•	Performing SLA Analysis to improve system performance.
+	•	Microservices architecture.
+	•	Mentoring Junior Engineers.
+	•	Leading Architecture, Design and Solution reviews.
+Programming Languages:
+Java, JavaScript, NodeJS, TypeScript, Python, Scala, Ruby, MATLAB, Go, SQL, HTML, CSS
+
+AI and Advanced Tooling:
+GenAI, MCP, RAG, Prompt Engineering, Agentic coding, Vibe Coding
+
+Frameworks:
+Spring Boot, Angular, Express, Vue, React, Play, Ruby on Rails, Bootstrap, Material UI 
+
+Test Frameworks:
+JUnit, Spring Test framework, Jest, Puppeteer, Playwright, Gatling 
+
+Security Technologies:
+OAuth, JWT, PASETO, SSL/TLS, OWASP, SAST/DAST tools (SonarQube, PMD, ZAP)
+
+Data Technologies:
+MySQL, MariaDB, MongoDB, CouchDB, Apache Kafka, RabbitMQ, Apache Solr, Redis
+
+CI/CD:
+Git, TeamCity, Jenkins, GitHub Actions, 
+
+AWS Technologies:
+EC2, S3, RDS, CloudFront, Elastic Load Balancing, DynamoDB
+
+Containerization:
+Docker, Kubernetes  

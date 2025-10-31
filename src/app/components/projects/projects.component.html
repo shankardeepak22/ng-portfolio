@@ -1,0 +1,23 @@
+<section id="projects" class="projects">
+  <div class="container">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-grid">
+      @for (project of projects(); track project.title) {
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-description">{{ project.description }}</p>
+            <div class="technologies">
+              @for (tech of project.technologies; track tech) {
+                <span class="tech-tag">{{ tech }}</span>
+              }
+            </div>
+            @if (project.link) {
+              <a [href]="project.link" class="project-link">View Project →</a>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

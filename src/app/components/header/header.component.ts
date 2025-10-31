@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ChangeDetectionStrategy, signal } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrl: './header.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+  public readonly isMenuOpen = signal(false);
 
-  constructor() { }
-
-  ngOnInit() {
+  toggleMenu() {
+    this.isMenuOpen.update(open => !open);
   }
 
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      this.isMenuOpen.set(false);
+    }
+  }
 }

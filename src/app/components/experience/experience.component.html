@@ -1,0 +1,32 @@
+<section id="experience" class="experience">
+  <div class="container">
+    <h2 class="section-title">Experience</h2>
+    <div class="experience-grid">
+      @for (exp of experiences(); track exp.company) {
+        <div class="experience-card">
+          <div class="company-header">
+            <div class="company-info">
+              <h3 class="company">{{ exp.company }}</h3>
+              <p class="location">📍 {{ exp.location }}</p>
+            </div>
+            <span class="total-period">{{ exp.totalPeriod }}</span>
+          </div>
+
+          @for (position of exp.positions; track position.title; let isLast = $last) {
+            <div class="position-block" [class.last-position]="isLast">
+              <div class="position-header">
+                <h4 class="position-title">{{ position.title }}</h4>
+                <span class="position-period">{{ position.period }}</span>
+              </div>
+              <ul class="description">
+                @for (item of position.description; track item) {
+                  <li>{{ item }}</li>
+                }
+              </ul>
+            </div>
+          }
+        </div>
+      }
+    </div>
+  </div>
+</section>
