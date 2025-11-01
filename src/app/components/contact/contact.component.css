@@ -40,7 +40,7 @@
   font-weight: 800;
   text-align: center;
   margin-bottom: 3rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #8b4513, #6b2c42);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -55,7 +55,7 @@
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #8b4513, #6b2c42);
   border-radius: 2px;
 }
 
@@ -99,7 +99,7 @@
 }
 
 .form-group:focus-within label {
-  color: #667eea;
+  color: #8b4513;
 }
 
 .form-group input,
@@ -116,9 +116,9 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #8b4513;
   background: white;
-  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+  box-shadow: 0 0 0 4px rgba(139, 69, 19, 0.1);
   transform: translateY(-2px);
 }
 
@@ -168,7 +168,7 @@
 
 .submit-btn {
   padding: 1.25rem 2.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #8b4513, #6b2c42);
   color: white;
   border: none;
   border-radius: 12px;

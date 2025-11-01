@@ -1,6 +1,6 @@
 <section id="experience" class="experience">
   <div class="container">
-    <h2 class="section-title">Experience</h2>
+    <h2 class="section-title">Experience & Projects</h2>
     <div class="experience-grid">
       @for (exp of experiences(); track exp.company) {
         <div class="experience-card">
@@ -12,8 +12,8 @@
             <span class="total-period">{{ exp.totalPeriod }}</span>
           </div>
 
-          @for (position of exp.positions; track position.title; let isLast = $last) {
-            <div class="position-block" [class.last-position]="isLast">
+          @for (position of exp.positions; track position.title) {
+            <div class="position-block">
               <div class="position-header">
                 <h4 class="position-title">{{ position.title }}</h4>
                 <span class="position-period">{{ position.period }}</span>
@@ -23,6 +23,25 @@
                   <li>{{ item }}</li>
                 }
               </ul>
+            </div>
+          }
+
+          @if (exp.projects && exp.projects.length > 0) {
+            <div class="projects-section">
+              <h4 class="projects-title">Key Projects</h4>
+              <div class="projects-grid">
+                @for (project of exp.projects; track project.title) {
+                  <div class="project-card">
+                    <h5 class="project-title">{{ project.title }}</h5>
+                    <p class="project-description">{{ project.description }}</p>
+                    <div class="technologies">
+                      @for (tech of project.technologies; track tech) {
+                        <span class="tech-tag">{{ tech }}</span>
+                      }
+                    </div>
+                  </div>
+                }
+              </div>
             </div>
           }
         </div>

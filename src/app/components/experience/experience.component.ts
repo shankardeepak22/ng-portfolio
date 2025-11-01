@@ -1,5 +1,11 @@
 import { Component, ChangeDetectionStrategy, signal } from '@angular/core';
 
+interface Project {
+  title: string;
+  description: string;
+  technologies: string[];
+}
+
 interface Position {
   title: string;
   period: string;
@@ -11,6 +17,7 @@ interface Experience {
   location: string;
   totalPeriod: string;
   positions: Position[];
+  projects?: Project[];
 }
 
 @Component({
@@ -46,6 +53,28 @@ export class ExperienceComponent {
             'Enabled faster solution scoring with batch processing, reducing cost of MATLAB source file compilation'
           ]
         }
+      ],
+      projects: [
+        {
+          title: 'MATLAB Grader MCP Server',
+          description: 'Developed innovative MCP Server integration with MATLAB Copilot to perform MATLAB Grader actions, enabling seamless AI-powered educational workflows.',
+          technologies: ['MCP', 'MATLAB', 'GenAI', 'Node.js']
+        },
+        {
+          title: 'API Gateway for MATLAB Online',
+          description: 'Pioneered API gateway development routing MATLAB Online requests to Grader microservices with load balancers and circuit-breakers, achieving 99.95% system availability.',
+          technologies: ['Java', 'Spring Boot', 'Microservices', 'Load Balancing', 'Circuit Breakers']
+        },
+        {
+          title: 'MATLAB Assessment Manager',
+          description: 'Led architecture and development of instructor-focused web application for managing and sharing curated problems, achieving 35% reduction in database duplications.',
+          technologies: ['Java', 'Spring Boot', 'Hibernate', 'MySQL', 'Angular']
+        },
+        {
+          title: 'Learning Tool Service Microservices',
+          description: 'Re-architected monolithic application as microservices using Java and Spring Boot, increasing system performance by 60% with batch processing for solution scoring.',
+          technologies: ['Java', 'Spring Boot', 'Microservices', 'Batch Processing']
+        }
       ]
     },
     {
@@ -63,6 +92,18 @@ export class ExperienceComponent {
             'Orchestrated migration from MySQL to MongoDB, optimizing schema management'
           ]
         }
+      ],
+      projects: [
+        {
+          title: 'Paychex Approvals System',
+          description: 'Enhanced payroll system with approval feature for secure direct deposit transactions and notification workflow using Apache FreeMarker.',
+          technologies: ['Java', 'Spring Boot', 'Apache FreeMarker', 'MySQL']
+        },
+        {
+          title: 'E-Signature Application',
+          description: 'Built reactive e-signature application using Spring Boot WebFlux for user consent management, integrated with Jenkins CI/CD pipeline.',
+          technologies: ['Spring Boot WebFlux', 'MongoDB', 'Jenkins', 'Reactive Programming']
+        }
       ]
     },
     {
@@ -78,6 +119,13 @@ export class ExperienceComponent {
             'Utilized Hibernate ORM for efficient data persistence and management',
             'Collaborated with cross-functional teams to deliver enterprise-level solutions'
           ]
+        }
+      ],
+      projects: [
+        {
+          title: 'Westlaw Index Management Tool',
+          description: 'Developed and integrated online index management tool for Westlaw legal research platform using Java and Spring framework with Hibernate ORM for data persistence.',
+          technologies: ['Java', 'Spring Framework', 'Hibernate', 'MySQL']
         }
       ]
     }

@@ -46,26 +46,80 @@ exports.sendContactEmail = functions.https.onRequest({
       replyTo: email,
       subject: `Portfolio Contact: ${subject}`,
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e5e7eb; border-radius: 12px;">
-          <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 8px 8px 0 0; margin: -20px -20px 20px -20px;">
-            <h2 style="color: white; margin: 0; font-size: 24px;">New Contact Form Submission</h2>
-          </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin: 0; padding: 0; background-color: #f5f5f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+  <table role="presentation" style="width: 100%; border-spacing: 0; border-collapse: collapse; padding: 40px 20px;">
+    <tr>
+      <td style="text-align: center;">
 
-          <div style="background: #f9fafb; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
-            <p style="margin: 0 0 10px 0; color: #374151;"><strong style="color: #1f2937;">Name:</strong> ${name}</p>
-            <p style="margin: 0 0 10px 0; color: #374151;"><strong style="color: #1f2937;">Email:</strong> ${email}</p>
-            <p style="margin: 0; color: #374151;"><strong style="color: #1f2937;">Subject:</strong> ${subject}</p>
-          </div>
+        <table role="presentation" style="width: 100%; max-width: 600px; margin: 0 auto; border-spacing: 0; border-collapse: collapse; background: #ffffff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);">
 
-          <div style="background: white; padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
-            <h3 style="color: #1f2937; margin-top: 0;">Message:</h3>
-            <p style="color: #4b5563; line-height: 1.6; white-space: pre-wrap;">${message}</p>
-          </div>
+          <tr>
+            <td style="padding: 40px 40px 30px 40px; border-bottom: 1px solid #e5e5e5;">
+              <h1 style="color: #1a1a1a; font-size: 24px; font-weight: 600; margin: 0 0 8px 0; letter-spacing: -0.5px;">New Contact Message</h1>
+              <p style="color: #737373; font-size: 14px; margin: 0;">Portfolio Contact Form Submission</p>
+            </td>
+          </tr>
 
-          <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 14px; text-align: center;">
-            <p style="margin: 0;">This email was sent from your portfolio contact form</p>
-          </div>
-        </div>
+          <tr>
+            <td style="padding: 30px 40px;">
+              <table role="presentation" style="width: 100%; border-spacing: 0; border-collapse: collapse;">
+                <tr>
+                  <td style="padding-bottom: 20px;">
+                    <p style="margin: 0 0 4px 0; color: #737373; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">From</p>
+                    <p style="margin: 0; color: #1a1a1a; font-size: 16px; font-weight: 500;">${name}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-bottom: 20px;">
+                    <p style="margin: 0 0 4px 0; color: #737373; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Email</p>
+                    <p style="margin: 0;">
+                      <a href="mailto:${email}" style="color: #1a1a1a; font-size: 16px; text-decoration: none;">${email}</a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-bottom: 20px;">
+                    <p style="margin: 0 0 4px 0; color: #737373; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Subject</p>
+                    <p style="margin: 0; color: #1a1a1a; font-size: 16px; font-weight: 500;">${subject}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-top: 10px; border-top: 1px solid #e5e5e5;">
+                    <p style="margin: 0 0 12px 0; color: #737373; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; padding-top: 20px;">Message</p>
+                    <p style="color: #1a1a1a; font-size: 15px; line-height: 1.6; margin: 0; white-space: pre-wrap;">${message}</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding: 30px 40px; background-color: #fafafa; border-top: 1px solid #e5e5e5;">
+              <a href="mailto:${email}" style="display: inline-block; background-color: #1a1a1a; color: #ffffff; font-size: 14px; font-weight: 500; text-decoration: none; padding: 12px 24px; border-radius: 4px;">Reply to ${name}</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding: 20px 40px; background-color: #fafafa; text-align: center; border-top: 1px solid #e5e5e5;">
+              <p style="color: #a3a3a3; font-size: 12px; margin: 0;">
+                ${new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+              </p>
+            </td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
       `,
     };
 

@@ -1,13 +1,9 @@
 import { Component, ChangeDetectionStrategy, signal } from '@angular/core';
 
-interface Skill {
-  name: string;
-  level: number;
-}
-
 interface SkillCategory {
   category: string;
-  skills: Skill[];
+  icon: string;
+  skills: string[];
 }
 
 @Component({
@@ -19,64 +15,49 @@ interface SkillCategory {
 export class SkillsComponent {
   public readonly skillCategories = signal<SkillCategory[]>([
     {
-      category: 'Backend & Languages',
-      skills: [
-        { name: 'Java', level: 95 },
-        { name: 'Spring Boot', level: 95 },
-        { name: 'Node.js', level: 90 },
-        { name: 'TypeScript', level: 90 },
-        { name: 'Python', level: 80 }
-      ]
+      category: 'Languages & Backend',
+      icon: '⚙️',
+      skills: ['Java', 'Spring Boot', 'Node.js', 'TypeScript', 'Python', 'JavaScript']
     },
     {
-      category: 'Frontend & Frameworks',
-      skills: [
-        { name: 'Angular', level: 90 },
-        { name: 'React', level: 85 },
-        { name: 'Vue', level: 80 },
-        { name: 'JavaScript', level: 90 },
-        { name: 'HTML/CSS', level: 85 }
-      ]
+      category: 'Frontend & UI',
+      icon: '🎨',
+      skills: ['Angular', 'React', 'Vue.js', 'HTML/CSS', 'Responsive Design']
     },
     {
-      category: 'AI & Advanced Tooling',
-      skills: [
-        { name: 'GenAI', level: 85 },
-        { name: 'MCP', level: 90 },
-        { name: 'RAG', level: 80 },
-        { name: 'Prompt Engineering', level: 85 },
-        { name: 'Agentic Coding', level: 80 }
-      ]
+      category: 'Databases',
+      icon: '💾',
+      skills: ['MySQL', 'MariaDB', 'MongoDB', 'Redis', 'Hibernate']
     },
     {
-      category: 'Data & Messaging',
-      skills: [
-        { name: 'MySQL/MariaDB', level: 90 },
-        { name: 'MongoDB', level: 90 },
-        { name: 'Apache Kafka', level: 85 },
-        { name: 'Redis', level: 80 },
-        { name: 'RabbitMQ', level: 80 }
-      ]
+      category: 'Cloud & DevOps',
+      icon: '☁️',
+      skills: ['AWS', 'Docker', 'Kubernetes', 'Jenkins', 'GitHub Actions', 'CI/CD']
     },
     {
-      category: 'Security & DevOps',
-      skills: [
-        { name: 'OAuth/JWT/PASETO', level: 90 },
-        { name: 'Docker/Kubernetes', level: 85 },
-        { name: 'AWS', level: 85 },
-        { name: 'Jenkins/GitHub Actions', level: 90 },
-        { name: 'SAST/DAST', level: 80 }
-      ]
+      category: 'Architecture & Patterns',
+      icon: '🏗️',
+      skills: ['Microservices', 'REST APIs', 'Event-Driven', 'Load Balancing', 'Circuit Breakers']
     },
     {
-      category: 'Testing & Quality',
-      skills: [
-        { name: 'JUnit', level: 90 },
-        { name: 'Jest', level: 85 },
-        { name: 'Playwright', level: 80 },
-        { name: 'Gatling', level: 80 },
-        { name: 'SonarQube', level: 85 }
-      ]
+      category: 'Messaging & Streaming',
+      icon: '📡',
+      skills: ['Apache Kafka', 'RabbitMQ', 'WebFlux', 'Reactive Programming']
+    },
+    {
+      category: 'Security',
+      icon: '🔐',
+      skills: ['OAuth 2.0', 'JWT', 'PASETO', 'SAST', 'DAST']
+    },
+    {
+      category: 'AI & Emerging Tech',
+      icon: '🤖',
+      skills: ['GenAI', 'MCP', 'RAG', 'Prompt Engineering', 'AI Agents']
+    },
+    {
+      category: 'Testing',
+      icon: '🧪',
+      skills: ['JUnit', 'Jest', 'Playwright', 'Gatling', 'SonarQube']
     }
   ]);
 }
